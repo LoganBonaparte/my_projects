@@ -1,0 +1,57 @@
+Task Manager
+A simple, easy-to-use task manager to help you keep track of your to-do list. It uses SQLite to store tasks and gives you the ability to add, update, view, and delete tasks, 
+as well as generate visualizations and export your tasks.
+
+Features
+Task Management: Add, update, delete tasks.
+
+Task Sorting: View tasks sorted by priority or due date.
+
+Task Suggestions: Get suggested tasks based on priority.
+
+Gantt Chart: Visualize task deadlines.
+
+Export to CSV: Export all your tasks to a CSV file for later use.
+
+Requirements
+To run this app, you'll need Python 3.x installed, along with the pandas and matplotlib libraries.
+
+How to Use:
+Download or clone the repository.
+
+Install the required libraries (pandas and matplotlib).
+
+When you run the program, you’ll be greeted with a simple menu:
+
+Add Task: Create a new task with details like name, description, priority, and due date.
+
+View Tasks: See all your tasks, either sorted by priority or due date.
+
+Update Task: Change the details of a task or mark it as complete.
+
+Delete Task: Remove a task from your list.
+
+Suggest Tasks: Get a list of pending tasks sorted by priority.
+
+Generate Gantt Chart: See a visual timeline of your pending tasks.
+
+Export to CSV: Export all tasks to a CSV file so you can use them outside of the app.
+
+The Database
+The app uses an SQLite database with a simple structure to store tasks:
+
+sql
+Copiar
+Editar
+CREATE TABLE IF NOT EXISTS tasks (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    description TEXT,
+    priority INTEGER NOT NULL,
+    due_date TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'Pending'
+);
+No need to worry about configuring the database – everything is handled for you.
+
+License
+Feel free to use this project for whatever you'd like. It's open-source and licensed under the MIT License.
